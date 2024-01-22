@@ -4,4 +4,11 @@
         <Description>This is not intended to be used directly from your code.</Description>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="EmbedResourceCSharp" Version="1.1.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
 </Project>
