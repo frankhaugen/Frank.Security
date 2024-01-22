@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>This is not intended to be used directly from your code.</Description>
+    </PropertyGroup>
+
+</Project>
