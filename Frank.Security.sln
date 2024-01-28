@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Security.Resources", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Security.Cryptography", "Frank.Security.Cryptography\Frank.Security.Cryptography.csproj", "{26F86900-7AC1-4D11-B1E5-0330A8E616BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Security.HaveIBeenPwned", "Frank.Security.HaveIBeenPwned\Frank.Security.HaveIBeenPwned.csproj", "{41C95E34-B76B-4EB2-876F-B229AD317E58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,5 +41,9 @@ Global
 		{26F86900-7AC1-4D11-B1E5-0330A8E616BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26F86900-7AC1-4D11-B1E5-0330A8E616BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26F86900-7AC1-4D11-B1E5-0330A8E616BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C95E34-B76B-4EB2-876F-B229AD317E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C95E34-B76B-4EB2-876F-B229AD317E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C95E34-B76B-4EB2-876F-B229AD317E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C95E34-B76B-4EB2-876F-B229AD317E58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

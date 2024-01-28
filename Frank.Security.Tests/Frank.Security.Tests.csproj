@@ -6,8 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoFixture" Version="4.18.1" />
         <PackageReference Include="FluentAssertions" Version="6.12.0" />
-        <PackageReference Include="Frank.Testing.TestOutputExtensions" Version="1.4.0" />
+        <PackageReference Include="Frank.Testing.Logging" Version="1.5.0" />
+        <PackageReference Include="Frank.Testing.TestOutputExtensions" Version="1.5.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
         <PackageReference Include="NSubstitute" Version="5.1.0" />
         <PackageReference Include="xunit" Version="2.6.6" />
@@ -22,6 +24,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Frank.Security.Cryptography\Frank.Security.Cryptography.csproj" />
+      <ProjectReference Include="..\Frank.Security.HaveIBeenPwned\Frank.Security.HaveIBeenPwned.csproj" />
       <ProjectReference Include="..\Frank.Security.Resources\Frank.Security.Resources.csproj" />
     </ItemGroup>
 

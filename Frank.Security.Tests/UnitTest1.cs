@@ -1,6 +1,4 @@
-using System.Drawing;
-using System.Globalization;
-using System.Text.RegularExpressions;
+using System.Text;
 using Frank.Security.Resources;
 using Xunit.Abstractions;
 
@@ -18,50 +16,116 @@ public class UnitTest1
     [Fact]
     public void GetNouns()
     {
-        var things = new List<string>();
-        
-        var cultures = GetCultures();
-        foreach (var culture in cultures)
-        {
-            var regionName = culture.EnglishName;
-            // var regionNamePart = Regex.Replace(regionName, @"[^a-zA-Z0-9]", string.Empty);
-            things.Add(regionName);
-        }
-        
-        _output.WriteCSharp(things.Where(x => x.Length > 3 && !x.Contains(' ') && !x.Contains('-')).Select(x => x.ToLowerInvariant()).Distinct().Order().ToHashSet());
-    }   
-    
-    List<CultureInfo> GetCultures() => CultureInfo.GetCultures(CultureTypes.AllCultures)
-        .OrderBy(x => x.Name)
-        .DistinctBy(x => x.Name)
-        .ToList();
-
-    Dictionary<int, RegionInfo> GetRegions(List<CultureInfo> cultures)
-    {
-        var regions = new Dictionary<int, RegionInfo>();
-
-        foreach (var culture in cultures)
-        {
-            if (TryGetRegionInfo(culture, out var regionInfo) && regionInfo != null && regionInfo.TwoLetterISORegionName.All(Char.IsLetter))
-            {
-                regions.TryAdd(regionInfo.GeoId, regionInfo);
-            }
-        }
-
-        return regions;
+        _output.WriteCSharp(ListOfString);
     }
 
-    bool TryGetRegionInfo(CultureInfo culture, out RegionInfo? regionInfo)
-    {
-        try
+    private List<string> ListOfString
+        = new List<string>()
         {
-            regionInfo = new RegionInfo(culture.Name);
-            return true;
-        }
-        catch (Exception ex)
-        {
-            regionInfo = null;
-            return false;
-        }
-    }
+            "a",
+            "abaft",
+            "aboard",
+            "about",
+            "above",
+            "absent",
+            "across",
+            "afore",
+            "after",
+            "against",
+            "along",
+            "alongside",
+            "amid",
+            "amidst",
+            "among",
+            "amongst",
+            "an",
+            "anenst",
+            "apropos",
+            "apud",
+            "around",
+            "as",
+            "aside",
+            "astride",
+            "at",
+            "athwart",
+            "atop",
+            "barring",
+            "before",
+            "behind",
+            "below",
+            "beneath",
+            "beside",
+            "besides",
+            "between",
+            "beyond",
+            "but",
+            "by",
+            "circa",
+            "concerning",
+            "despite",
+            "down",
+            "during",
+            "except",
+            "excluding",
+            "failing",
+            "following",
+            "for",
+            "forenenst",
+            "from",
+            "given",
+            "in",
+            "including",
+            "inside",
+            "into",
+            "lest",
+            "like",
+            "mid",
+            "midst",
+            "minus",
+            "modulo",
+            "near",
+            "next",
+            "notwithstanding",
+            "of",
+            "off",
+            "on",
+            "onto",
+            "opposite",
+            "out",
+            "outside",
+            "over",
+            "pace",
+            "past",
+            "per",
+            "plus",
+            "pro",
+            "qua",
+            "regarding",
+            "round",
+            "sans",
+            "save",
+            "since",
+            "than",
+            "through",
+            "throughout",
+            "till",
+            "times",
+            "to",
+            "toward",
+            "towards",
+            "under",
+            "underneath",
+            "unlike",
+            "until",
+            "unto",
+            "up",
+            "upon",
+            "versus",
+            "via",
+            "vice",
+            "with",
+            "within",
+            "without",
+            "worth"
+        };
 }
